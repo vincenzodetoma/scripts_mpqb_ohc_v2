@@ -74,7 +74,7 @@ for i in models:
 dict_vars = {thetao_int[i].name : (thetao_int[i].dims, thetao_int[i].values, thetao_int[i].attrs) for i in range(len(thetao_int))}
 out_ds = xr.Dataset(dict_vars, coords=thetao_int[0].coords)
 out_ds.attrs['notes'] = 'Created from Vincenzo de Toma on 20/10/2019'
-out_ds.to_netcdf(out_path+'/'+y+'/thetao_grepv2_monthly_'+y+m+'.nc')
+out_ds.to_netcdf(out_path+'/'+y+'/thetao_int_grepv2_monthly_'+y+m+'.nc')
 dm.close()
 ds.close()
 out_ds.close()
